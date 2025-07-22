@@ -67,7 +67,7 @@ private:
     T queryRange(int node, int start, int end, int l, int r) {
         propagate(node, start, end);
         if (r < start || end < l)
-            return INT_MAX;
+            return 1e16;
         if (l <= start && end <= r)
             return tree[node];
         int m = mid(start, end);

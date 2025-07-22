@@ -75,7 +75,7 @@ private:
         // If the current node's range is completely outside
         // the query range
         if (r < start || end < l)
-            return INT_MAX;
+            return 1e16;
         // If the current node's range is completely inside
         // the query range
         if (l <= start && end <= r)
